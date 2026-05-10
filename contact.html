@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIZ BILAN ALOQA</title>
+    <link rel="stylesheet" href="fonts/stylesheet.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- HEADER -->
+      <header class="header">
+        <div class="header__top">
+          <div class="container">
+            <div class="header__top-inner">
+              <button class="burger">
+                <span class="burger__span">
+                  <!-- btn - 2 -->
+                </span>
+              </button>
+              <ul class="header__top-list" id="authNav">
+                <li class="header__top-list-item">
+                  <a class="header__top-list-link" href="#">
+                    Ro'yxatdan o'tish
+                  </a>
+                </li>
+                <li class="header__top-list-item">
+                  <a class="header__top-list-link" href="#"> Kirish </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="container">
+            <div class="header__bottom-inner">
+              <a class="header__logo" href="index.html">
+                TerDU <br />
+                Axborot Texnologiyalari
+              </a>
+              <nav class="header__nav">
+                <ul class="header__nav-list">
+                  <li class="header__nav-list-item">
+                    <a class="header__nav-list-link" href="index.html">
+                      Asosiy
+                    </a>
+                  </li>
+                  <li class="header__nav-list-item">
+                    <a class="header__nav-list-link" href="articles.html">
+                      Maqolalar
+                    </a>
+                  </li>
+                  <li class="header__nav-list-item">
+                    <a class="header__nav-list-link" href="about.html">
+                      Biz haqimizda
+                    </a>
+                  </li>
+                  <li class="header__nav-list-item">
+                    <a class="header__nav-list-link" href="contact.html">
+                      Biz bilan aloqa
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- / HEADER -->
+
+      <!-- HERO SECTION -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero__inner">
+            <h1 class="hero__title">Biz bilan aloqa</h1>
+            <p class="hero__subtitle">
+              Savol va murojatlaringiz uchun biz bilan bog'laning. Professional
+              jamoamiz sizga tez va samarali yordam beradi.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section class="contact-section">
+        <div class="container">
+          <div class="contact-section__inner">
+            <!-- Contact Info -->
+            <div class="contact-info">
+              <h2 class="contact-info__title">Aloqa ma'lumotlari</h2>
+              <p class="contact-info__subtitle">
+                Quyidagi ma'lumotlar orqali biz bilan bog'lanishingiz mumkin
+              </p>
+
+              <div class="contact-info__items">
+                <div class="contact-info__item">
+                  <div class="contact-info__icon">
+                    <img src="images/address.png" alt="address" />
+                  </div>
+                  <div class="contact-info__content">
+                    <h3 class="contact-info__label">Manzil</h3>
+                    <p class="contact-info__text">
+                      Surxondaryo viloyati, Termiz shahri<br />
+                      Termiz davlat universiteti
+                    </p>
+                  </div>
+                </div>
+
+                <div class="contact-info__item">
+                  <div class="contact-info__icon">
+                    <img src="images/phone.png" alt="phone" />
+                  </div>
+                  <div class="contact-info__content">
+                    <h3 class="contact-info__label">Telefon</h3>
+                    <p class="contact-info__text">
+                      <a href="tel:+998945110234">+998 94 511 02 34</a><br />
+                      <a href="tel:+998990460101">+998 99 046 01 01</a>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="contact-info__item">
+                  <div class="contact-info__icon">
+                    <img src="images/email.png" alt="email" />
+                  </div>
+                  <div class="contact-info__content">
+                    <h3 class="contact-info__label">Elektron pochta</h3>
+                    <p class="contact-info__text">
+                      <a href="mailto:smurodov780@gmail.com"
+                        >smurodov780@gmail.com</a
+                      ><br />
+                      <a href="mailto:terdu@gmail.com">terdu@gmail.com</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+              <h2 class="contact-form__title">Xabar yuborish</h2>
+              <p class="contact-form__subtitle">
+                Savol yoki murojatingizni yuboring, tez orada javob beramiz
+              </p>
+
+              <form
+                class="contact-form__main"
+                id="messageForm"
+                action="#"
+                method="post"
+                name="contact-form"
+              >
+                <div class="contact-form__main-item">
+                  <textarea
+                    class="contact-form__textarea"
+                    id="messageInput"
+                    name="message"
+                    placeholder="Xabar matni..."
+                    required
+                  ></textarea>
+                </div>
+                <div class="contact-form__main-item">
+                  <button
+                    class="contact-form__btn"
+                    type="submit"
+                    id="contactSubmitBtn"
+                  >
+                    <span class="contact-form__btn-text">Yuborish</span>
+                    <span class="contact-form__btn-icon">→</span>
+                  </button>
+                </div>
+                <div id="contactStatus" class="contact-form__status"></div>
+              </form>
+
+              <div id="loginPrompt" class="contact-form__login-prompt">
+                <div class="contact-form__login-icon">🔒</div>
+                <p>
+                  Xabar yuborish uchun
+                  <a href="login.html">kirishingiz</a> kerak.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MESSAGES SECTION -->
+      <section class="messages-section">
+        <div class="container">
+          <div class="messages-section__inner">
+            <h2 class="messages-section__title">So'nggi xabarlar</h2>
+            <p class="messages-section__subtitle">
+              Boshqa foydalanuvchilarning murojaatlari va javoblar
+            </p>
+            <div id="messageList" class="messages-section__list"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <p class="footer__copyright-text">
+              © 2023 Termiz Davlat Universiteti Axborot Texnologiyalari
+            </p>
+          </div>
+        </div>
+      </footer>
+      <!-- / FOOTER -->
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

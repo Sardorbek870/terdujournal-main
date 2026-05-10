@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - TerduJournal</title>
+    <link rel="stylesheet" href="fonts/stylesheet.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      .dashboard-container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 30px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: #f9f9f9;
+      }
+      .dashboard-container h1 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+      .dashboard-container p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.6;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .btn:hover {
+        background: #0056b3;
+      }
+      .btn-danger {
+        background: #dc3545;
+      }
+      .btn-danger:hover {
+        background: #c82333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <h1 id="welcomeMsg">Loading...</h1>
+      <p>You are successfully logged in to TerduJournal!</p>
+      <p>From here you can:</p>
+      <ul>
+        <li>View your articles</li>
+        <li>Create new journal entries</li>
+        <li>Manage your profile</li>
+      </ul>
+      <div>
+        <a href="/" class="btn">Back to Home</a>
+        <button onclick="logout()" class="btn btn-danger">Logout</button>
+      </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+      // Check if user is logged in
+      async function checkAuth() {
+        const authStatus = await checkAuthStatus();
+        if (!authStatus.authenticated) {
+          window.location.href = "/login.html";
+        } else {
+          document.getElementById("welcomeMsg").textContent =
+            `Welcome, ${authStatus.username}!`;
+        }
+      }
+
+      checkAuth();
+    </script>
+  </body>
+</html>
